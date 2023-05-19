@@ -7,7 +7,7 @@ public class Animal {
     public String Familia;
     public int Idade;
     public boolean Estado;
-    public int Caloria;
+    public double Caloria;
     public int Forca;
 
     /*
@@ -113,6 +113,10 @@ public class Animal {
                 " está " + vivo;
     }
     
+    public void mostra_dados(){
+        toString();
+    }
+    
     
     public static void main(String[] args) {
         String Nome, Classe, Familia;
@@ -123,8 +127,7 @@ public class Animal {
         Classe = scanner.next();
         System.out.println("Qual a família do animal?");
         Familia = scanner.next();
-        Animal animal1 = new Animal();
-        animal1.nascer(Nome, Classe, Familia);
+        Animal animal1 = new Animal(Nome, Classe, Familia);
         System.out.println(animal1.toString());
     }
 }
