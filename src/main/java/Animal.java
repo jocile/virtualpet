@@ -52,17 +52,17 @@ public class Animal {
         } else {
             System.out.println("O animal está exausto!Faça-o dormir um pouco!");
         }
-
+    }
     /*
     CORRER – método que retira determinada quantidade de
     calorias e uma quantidade de força por ter realizado 
     essa ação, caso o animal não esteja morto ou exausto.
     */
     public void correr() {
-        if ((Estado) & (Forca >= 10) & Caloria > 10 ) {
-            Caloria = Caloria - 10;
-            Forca = Forca - 10;
-        } else if (!(Estado)) {
+        if ((this.Estado) & (this.Forca >= 10) & (this.Caloria >= 10) ) {
+            this.Caloria = this.Caloria - 10;
+            this.Forca = this.Forca - 10;
+        } else if ((this.Estado) == false) {
             System.out.println("O animal está morto e não pode correr!");
             }else if (Caloria < 10){
                 System.out.println("O animal está fraco! Faça-o comer!");
