@@ -34,7 +34,7 @@ public class Animal {
     public String morrer() {
         this.Estado = false;
         this.Forca = 0;
-        return "Morto";
+        return this.Nome + " está morto";
     }
 
     /*
@@ -44,11 +44,14 @@ public class Animal {
     essa ação.
     */
     public void comer() {
-        if ((Estado) & (Forca > 10)) {
-            Caloria = Caloria + 20;
-            Forca = Forca - 10;
+        if ((this.Estado) & (this.Forca > 10)) {
+            this.Caloria = this.Caloria + 20;
+            this.Forca = this.Forca - 10;
+        } else if (this.Estado){
+            System.out.println("O animal está morto e não pode comer!");
+        } else {
+            System.out.println("O animal está exausto!Faça-o dormir um pouco!");
         }
-    }
 
     /*
     CORRER – método que retira determinada quantidade de
@@ -88,7 +91,7 @@ public class Animal {
         if (Estado) vivo = "vivo";
         else vivo = "morto";
         return "O animal: " + Nome +
-                "da classe: " + Classe +
+                " da classe: " + Classe +
                 " está " + vivo;
     }
     
@@ -104,6 +107,6 @@ public class Animal {
         Familia = scanner.next();
         Animal animal1 = new Animal();
         animal1.nascer(Nome, Classe, Familia);
-        animal1.toString();
+        System.out.println(animal1.toString());
     }
 }
