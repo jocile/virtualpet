@@ -11,7 +11,8 @@ public class Animal {
     public int Forca;
 
     /*
-    NASCER – método que pergunta os dados do animal:
+    Construtor -  Antigo método NASCER 
+    – método que pergunta os dados do animal:
     nome, classe e família, coloca-o em estado vivo,
     insere uma quantidade de calorias e força e
     insere 0 como estado do atributo idade....
@@ -20,6 +21,22 @@ public class Animal {
         this.Nome = nome;
         this.Classe = classe;
         this.Familia = familia;
+        this.Idade = 0;
+        this.Estado = true;
+        this.Caloria = 10;
+        this.Forca = 10;
+        
+        System.out.println("O " + Nome + " nasceu");
+    }
+    
+    /*
+    outro método construtor para casos em que o animal 
+    seja um cachorro.
+    */
+    public Animal(String nome) {
+        this.Nome = nome;
+        this.Classe = "Mamífero";
+        this.Familia = "Canídeo";
         this.Idade = 0;
         this.Estado = true;
         this.Caloria = 10;
