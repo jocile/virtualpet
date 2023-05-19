@@ -64,7 +64,7 @@ public class Animal {
             this.Forca = this.Forca - 10;
         } else if ((this.Estado) == false) {
             System.out.println("O animal está morto e não pode correr!");
-            }else if (Caloria < 10){
+            }else if (this.Caloria < 10){
                 System.out.println("O animal está fraco! Faça-o comer!");
             }else {
                 System.out.println("O animal está exausto! Faça-o dormir!");
@@ -77,11 +77,12 @@ public class Animal {
     animal não esteja morto.
     */
     public void dormir() {
-        if (Estado) {
-            Caloria = Caloria - 5;
-            Forca = Forca +20;
+        if (this.Estado) {
+            this.Caloria = this.Caloria - 5;
+            this.Forca = this.Forca +20;
         }else {
-            System.out.println("O animal está morto!");
+            System.out.println("O animal " + this.Nome 
+                    + " está morto!");
         }
     }
 
