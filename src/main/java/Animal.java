@@ -16,7 +16,7 @@ public class Animal {
     insere uma quantidade de calorias e força e
     insere 0 como estado do atributo idade....
     */
-    public void nascer(String nome, String classe, String familia) {
+    public Animal(String nome, String classe, String familia) {
         this.Nome = nome;
         this.Classe = classe;
         this.Familia = familia;
@@ -31,10 +31,10 @@ public class Animal {
     /*
     MORRER – método que coloca o objeto em estado morto
     */
-    public String morrer() {
+    public void destruidor() {
         this.Estado = false;
         this.Forca = 0;
-        return this.Nome + " está morto";
+        System.out.println(this.Nome + " está morto");
     }
 
     /*
