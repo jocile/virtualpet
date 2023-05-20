@@ -2,9 +2,9 @@
 import java.util.Scanner;
 
 public class Animal {
-    public String Nome;
-    public String Classe;
-    public String Familia;
+    private String Nome;
+    private String Classe;
+    private String Familia;
     public int Idade;
     public boolean Estado;
     public double Caloria;
@@ -53,6 +53,28 @@ public class Animal {
         this.Forca = 0;
         System.out.println(this.Nome + " está morto");
     }
+    
+    public void setNome(String N){
+        this.Nome = N;
+    }
+
+    public void setClasse(String Classe) {
+        this.Classe = Classe;
+    }
+
+    public void setFamilia(String Familia) {
+        this.Familia = Familia;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public boolean isEstado() {
+        return Estado;
+    }
+    
+    
 
     /*
     COMER – método que, caso o animal não esteja cheio 

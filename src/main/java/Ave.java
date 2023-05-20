@@ -1,12 +1,28 @@
 
 public class Ave extends Animal {
-    String cor_pena;
-    Boolean voa;
+    private String cor_pena;
+    private Boolean voa;
 
     public Ave(String NA,String CA,String FA,String CP,Boolean V) {
         super(NA, CA, FA);
         this.cor_pena = CP;
 	this.voa = V;
+    }
+
+    public void setCor_pena(String cor_pena) {
+        this.cor_pena = cor_pena;
+    }
+
+    public void setVoa(Boolean voa) {
+        this.voa = voa;
+    }
+
+    public String getCor_pena() {
+        return cor_pena;
+    }
+
+    public Boolean getVoa() {
+        return voa;
     }
     
     public void voar (float mts){
